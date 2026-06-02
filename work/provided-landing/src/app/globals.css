@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  background: #ffffff;
+  color: #202124;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, rgba(255, 200, 87, 0.3), transparent 34rem),
+    linear-gradient(180deg, #fffaf2 0%, #ffffff 28%, #ffffff 100%);
+  color: #202124;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(255, 122, 0, 0.22);
+}
+
+.focus-ring {
+  @apply outline-none ring-offset-2 ring-offset-white focus-visible:ring-2 focus-visible:ring-piggy-orange;
+}

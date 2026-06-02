@@ -440,7 +440,19 @@ export function LandingPage() {
 
       <footer className="px-5 pb-8 sm:px-8 lg:px-10">
         <div className="mx-auto flex max-w-7xl flex-col gap-5 border-t border-black/10 pt-7 text-sm font-semibold text-black/60 sm:flex-row sm:items-center sm:justify-between">
-          <p>Copyright This Little Piggy</p>
+          <p>
+            Copyright This Little Piggy{" "}
+            <span className="text-black/35">|</span>{" "}
+            Powered by:{" "}
+            <a
+              href="https://www.clickecommerce.com.au"
+              className="focus-ring rounded-full hover:text-piggy-orange"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Click eCommerce
+            </a>
+          </p>
           <div className="flex flex-wrap gap-4">
             {footerLinks.map((link) => (
               <Link key={link.label} href={link.href} className="focus-ring rounded-full hover:text-piggy-orange">

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import {
   ArrowRight,
@@ -123,6 +124,13 @@ const faqs = [
   ["How does the AI work?", "It analyses listings and identifies potential upgrade opportunities."],
   ["Can I list my own trades?", "Yes. The platform will support both internal listings and marketplace opportunities."],
   ["Is it available worldwide?", "The long-term goal is global availability."]
+];
+
+const footerLinks = [
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Terms", href: "/terms" }
 ];
 
 function Section({
@@ -432,12 +440,12 @@ export function LandingPage() {
 
       <footer className="px-5 pb-8 sm:px-8 lg:px-10">
         <div className="mx-auto flex max-w-7xl flex-col gap-5 border-t border-black/10 pt-7 text-sm font-semibold text-black/60 sm:flex-row sm:items-center sm:justify-between">
-          <p>© This Little Piggy</p>
+          <p>Copyright This Little Piggy</p>
           <div className="flex flex-wrap gap-4">
-            {["About", "Contact", "Privacy Policy", "Terms"].map((link) => (
-              <a key={link} href="#" className="focus-ring rounded-full hover:text-piggy-orange">
-                {link}
-              </a>
+            {footerLinks.map((link) => (
+              <Link key={link.label} href={link.href} className="focus-ring rounded-full hover:text-piggy-orange">
+                {link.label}
+              </Link>
             ))}
           </div>
         </div>
